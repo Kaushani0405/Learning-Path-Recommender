@@ -17,24 +17,19 @@ export default function Recommendations() {
     }
   }, []);
 
-  // ✅ Always return an ARRAY for weeks
   const weeks = useMemo(() => {
     if (!roadmap) return [];
 
-    // if backend returns directly an array
     if (Array.isArray(roadmap)) return roadmap;
 
-    // common wrappers
     if (Array.isArray(roadmap.roadmap)) return roadmap.roadmap;
     if (Array.isArray(roadmap.weeks)) return roadmap.weeks;
     if (Array.isArray(roadmap.data)) return roadmap.data;
 
-    // sometimes backend returns: { roadmap: { weeks: [...] } }
+
     if (roadmap.roadmap && Array.isArray(roadmap.roadmap.weeks))
       return roadmap.roadmap.weeks;
 
-    // if it returns an object like { week1: {...}, week2: {...} }
-    // convert object values into array
     if (typeof roadmap === "object") {
       const vals = Object.values(roadmap);
       if (Array.isArray(vals) && vals.length > 0) return vals;

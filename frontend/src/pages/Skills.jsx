@@ -21,18 +21,15 @@ export default function Skills() {
         hoursPerWeek: hours,
       };
 
-      // 🔥 DIRECT backend call (no proxy confusion)
       const res = await axios.post(
         "http://localhost:5000/api/recommend",
         payload
       );
 
-      // Save user inputs
       localStorage.setItem("lpr_goal", goal);
       localStorage.setItem("lpr_level", level);
       localStorage.setItem("lpr_hours", String(hours));
 
-      // Save full roadmap returned from backend
       localStorage.setItem("roadmapData", JSON.stringify(res.data));
 
       navigate("/recommendations");

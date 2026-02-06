@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const Roadmap = require("../models/Roadmap");
 
-// POST /api/recommend
 router.post("/", async (req, res) => {
   try {
     console.log("✅ API HIT");
