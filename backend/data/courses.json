@@ -1,0 +1,37 @@
+[
+  {
+    "title": "HTML Fundamentals",
+    "type": "Course",
+    "hours": 3,
+    "track": ["frontend"],
+    "description": "Learn HTML structure, tags, forms, semantic elements, and accessibility basics."
+  },
+  {
+    "title": "CSS Basics & Layout",
+    "type": "Course",
+    "hours": 4,
+    "track": ["frontend"],
+    "description": "Understand CSS selectors, box model, flexbox, grid, and responsive layouts."
+  },
+  {
+    "title": "JavaScript Fundamentals",
+    "type": "Course",
+    "hours": 5,
+    "track": ["frontend"],
+    "description": "Learn variables, functions, loops, DOM manipulation, and basic logic."
+  },
+  {
+    "title": "React Essentials",
+    "type": "Course",
+    "hours": 6,
+    "track": ["frontend"],
+    "description": "Learn components, props, state management, and building reusable UI."
+  },
+  {
+    "title": "Mini Project",
+    "type": "Project",
+    "hours": 6,
+    "track": ["frontend"],
+    "description": "Build a small portfolio project applying all learned concepts."
+  }
+]
